@@ -53,7 +53,7 @@ CREATE TABLE Aula(
 ID_Aula int identity primary key not null,
 Piso int check (Piso between 1 and 2) not null,
 Tipo varchar(40) not null,
-Aforo int check (Aforo > 30) not null
+Aforo int check (Aforo <= 30) not null
 )
 
 CREATE TABLE Docente(
