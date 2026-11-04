@@ -99,7 +99,7 @@ CREATE TABLE Matricula(
 ID_Matricula varchar(5) primary key not null,
 Fecha date default getdate() check (Fecha <= getdate()) not null,
 Anio_lectivo int check (Anio_lectivo >= 2020 and Anio_lectivo <= year(getdate())) default year(getdate()) not null,
-Estado varchar(20) check(Estado in ('Pendiente', 'Finalizado', 'Cancelado', 'Traslado', 'Retirado', 'Suspendido')) not null,
+Estado varchar(20) check(Estado in ('Pendiente', 'Finalizado', 'Cancelado', 'Traslado', 'Retirado', 'Suspendido', 'Ratificado')) not null,
 Observacion varchar(50),
 IDEstu varchar(5) not null,
 IDSecc int,
