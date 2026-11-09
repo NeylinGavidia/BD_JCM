@@ -181,7 +181,7 @@ Motivo varchar(50) not null,
 Estado varchar(20) check(Estado in('Pendiente', 'Aprobado', 'Rechazado', 'Observado', 'Derivado')) not null,
 Observacion varchar(50),
 IDTD varchar(4) not null,
-IDDoc varchar(5) not null,
+IDDoc varchar(5) not null default 'D0011',
 Foreign key (IDTD) references Tipo_documento(ID_TipoDoc),
 Foreign key (IDDoc) references Docente(ID_Docente),
 Check(Fecha_resolucion > Fecha_recepcion)
